@@ -1,11 +1,11 @@
-package javamanipulacionbd;
+package manipulacionMVC;
 
 import controlador.ControlUsuario;
 import modelo.Consultas;
 import modelo.Usuario;
 import vista.VistaUsuario;
 
-public class JavaManipulacionBD {
+public class Manipulacion {
     
     public static void main(String args[]){
         Consultas query = new Consultas();
