@@ -16,6 +16,10 @@ public class JavaManipulacionBD {
      */
     public static void main(String[] args) {
         System.out.println("Hola mundo del GIT");
+        //@Brayan
+        for(int i = 0; i<10 ; i++){
+            System.out.println("Repeticion No."+i);
+        }
     }
     
 }
