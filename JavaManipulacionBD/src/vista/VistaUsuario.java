@@ -5,6 +5,8 @@
  */
 package vista;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Braya
@@ -16,6 +18,7 @@ public class VistaUsuario extends javax.swing.JFrame {
      */
     public VistaUsuario() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("imagenes/icono.png")).getImage());
     }
 
     /**
@@ -27,79 +30,136 @@ public class VistaUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
-        txtNombre = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtApellidoPaterno = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtApellidoMaterno = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
-        txtPsw = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        txtCodigoPostal = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        lblMatricula = new javax.swing.JLabel();
         txtMatricula = new javax.swing.JTextField();
+        lblNombre = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        lblApellidoPaterno = new javax.swing.JLabel();
+        txtApellidoPaterno = new javax.swing.JTextField();
+        lblApellidoMaterno = new javax.swing.JLabel();
+        txtApellidoMaterno = new javax.swing.JTextField();
+        lblCorreo = new javax.swing.JLabel();
+        txtCorreo = new javax.swing.JTextField();
+        lblPsw = new javax.swing.JLabel();
+        txtPsw = new javax.swing.JPasswordField();
+        lblCodigoPostal = new javax.swing.JLabel();
+        txtCodigoPostal = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Matricula: ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 70, 30));
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 150, -1));
-        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 150, -1));
+        lblMatricula.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblMatricula.setForeground(new java.awt.Color(51, 51, 51));
+        lblMatricula.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblMatricula.setText("Matricula: ");
+        getContentPane().add(lblMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 90, 30));
+        getContentPane().add(txtMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 160, 30));
 
-        jLabel2.setText("Nombre:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 70, 30));
-        getContentPane().add(txtApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 150, -1));
+        lblNombre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(51, 51, 51));
+        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblNombre.setText("Nombre:");
+        getContentPane().add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 90, 30));
+        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 160, 30));
 
-        jLabel3.setText("Ap Paterno:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 70, 30));
-        getContentPane().add(txtApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 150, -1));
+        lblApellidoPaterno.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblApellidoPaterno.setForeground(new java.awt.Color(51, 51, 51));
+        lblApellidoPaterno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblApellidoPaterno.setText("Ap Paterno:");
+        getContentPane().add(lblApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 90, 30));
+        getContentPane().add(txtApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 160, 30));
 
-        jLabel4.setText("Ap Materno:");
-        jLabel4.setToolTipText("");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 70, 30));
+        lblApellidoMaterno.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblApellidoMaterno.setForeground(new java.awt.Color(51, 51, 51));
+        lblApellidoMaterno.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblApellidoMaterno.setText("Ap Materno:");
+        lblApellidoMaterno.setToolTipText("");
+        getContentPane().add(lblApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 90, 30));
+        getContentPane().add(txtApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 160, 30));
 
-        jLabel5.setText("Correo:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 70, 30));
-        getContentPane().add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 150, -1));
-        getContentPane().add(txtPsw, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 150, -1));
+        lblCorreo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCorreo.setForeground(new java.awt.Color(51, 51, 51));
+        lblCorreo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblCorreo.setText("Correo:");
+        getContentPane().add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 90, 30));
+        getContentPane().add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 160, 30));
 
-        jLabel6.setText("Contraseña:");
-        jLabel6.setToolTipText("");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 70, 30));
-        getContentPane().add(txtCodigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 150, -1));
+        lblPsw.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblPsw.setForeground(new java.awt.Color(51, 51, 51));
+        lblPsw.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblPsw.setText("Contraseña:");
+        lblPsw.setToolTipText("");
+        getContentPane().add(lblPsw, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 90, 30));
+        getContentPane().add(txtPsw, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 160, 30));
 
-        jLabel7.setText("C.P:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 70, 30));
-        getContentPane().add(txtMatricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 150, -1));
+        lblCodigoPostal.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblCodigoPostal.setForeground(new java.awt.Color(51, 51, 51));
+        lblCodigoPostal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblCodigoPostal.setText("C.P:");
+        getContentPane().add(lblCodigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 90, 30));
+        getContentPane().add(txtCodigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 160, 30));
 
-        btnAgregar.setText("Agregar");
-        getContentPane().add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/Aceptar.png"))); // NOI18N
+        btnAgregar.setBorder(null);
+        btnAgregar.setBorderPainted(false);
+        btnAgregar.setContentAreaFilled(false);
+        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregar.setOpaque(false);
+        getContentPane().add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, -1, -1));
 
-        btnExit.setText("salir");
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, -1, -1));
+        btnExit.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setText("x");
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setContentAreaFilled(false);
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnExit.setOpaque(false);
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 0, 30, -1));
 
-        btnModificar.setText("Modificar");
-        getContentPane().add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/guardar.png"))); // NOI18N
+        btnModificar.setBorder(null);
+        btnModificar.setBorderPainted(false);
+        btnModificar.setContentAreaFilled(false);
+        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificar.setOpaque(false);
+        getContentPane().add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, -1, -1));
 
-        btnBorrar.setText("Borrar");
-        getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/Borrar.png"))); // NOI18N
+        btnBorrar.setBorder(null);
+        btnBorrar.setBorderPainted(false);
+        btnBorrar.setContentAreaFilled(false);
+        btnBorrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBorrar.setOpaque(false);
+        getContentPane().add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, -1, -1));
 
-        btnLimpiar.setText("Limpiar");
-        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/limpiar.png"))); // NOI18N
+        btnLimpiar.setBorder(null);
+        btnLimpiar.setBorderPainted(false);
+        btnLimpiar.setContentAreaFilled(false);
+        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimpiar.setOpaque(false);
+        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, -1));
 
-        btnBuscar.setText("Buscar");
-        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/lupa.png"))); // NOI18N
+        btnBuscar.setBorder(null);
+        btnBuscar.setBorderPainted(false);
+        btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscar.setOpaque(false);
+        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, -1, -1));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/fondo.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -140,26 +200,26 @@ public class VistaUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnBorrar;
     public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnExit;
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnModificar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel lblApellidoMaterno;
+    private javax.swing.JLabel lblApellidoPaterno;
+    private javax.swing.JLabel lblCodigoPostal;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblMatricula;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblPsw;
     public javax.swing.JTextField txtApellidoMaterno;
     public javax.swing.JTextField txtApellidoPaterno;
     public javax.swing.JTextField txtCodigoPostal;
     public javax.swing.JTextField txtCorreo;
-    public javax.swing.JTextField txtId;
     public javax.swing.JTextField txtMatricula;
     public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtPsw;
+    public javax.swing.JPasswordField txtPsw;
     // End of variables declaration//GEN-END:variables
 }

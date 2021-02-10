@@ -20,13 +20,13 @@ public class ControlUsuario {
         this.view.btnBorrar.addActionListener(this::actionPerformed);
         this.view.btnExit.addActionListener(this::actionPerformed);
         this.view.btnLimpiar.addActionListener(this::actionPerformed);
+        this.view.btnBuscar.addActionListener(this::actionPerformed);
         this.view.btnExit.addActionListener(this::actionPerformed);
     }
     
     public void inicar(){    
         view.setTitle("Usuario");
         view.setLocationRelativeTo(null);
-        view.txtId.setVisible(false);
         view.btnBorrar.setVisible(false);
         view.btnModificar.setVisible(false);
     }
@@ -36,20 +36,30 @@ public class ControlUsuario {
             if(view.txtNombre.getText().length() > 0 && view.txtApellidoPaterno.getText().length() > 0 && view.txtApellidoMaterno.getText().length() > 0 && view.txtCorreo.getText().length() > 0 && view.txtPsw.getText().length() > 0){
                 if(view.txtPsw.getText().length() > 8 && view.txtPsw.getText().length() < 17){
                     if(view.txtMatricula.getText().length() == 10){
-                        if(view.txtMatricula.getText().length() == 10){
-                            user.setMatricula(view.txtMatricula.getText());
-                            user.setNombre(view.txtNombre.getText());
-                            user.setApellidoP(view.txtApellidoPaterno.getText());
-                            user.setApellidoM(view.txtApellidoMaterno.getText());
-                            user.setCorreo(view.txtCorreo.getText());
-                            user.setContra(view.txtPsw.getText());
-                            user.setCodigoP(view.txtCodigoPostal.getText());
-                            if(query.agregarUsuario(user)){
-                                JOptionPane.showMessageDialog(null, "Usuario guardado correctamente!! :D","Operacion realizada",1);
-                                limpiar();
+                        if(view.txtCodigoPostal.getText().length() == 5){
+                            String[] partes1 = view.txtCorreo.getText().split("@");
+                            if(partes1.length == 2){
+                                String[] partes2 = partes1[1].split("\\.");
+                                if(partes2.length > 1){
+                                    user.setMatricula(view.txtMatricula.getText());
+                                    user.setNombre(view.txtNombre.getText());
+                                    user.setApellidoP(view.txtApellidoPaterno.getText());
+                                    user.setApellidoM(view.txtApellidoMaterno.getText());
+                                    user.setCorreo(view.txtCorreo.getText());
+                                    user.setContra(view.txtPsw.getText());
+                                    user.setCodigoP(view.txtCodigoPostal.getText());
+                                    if(query.agregarUsuario(user)){
+                                        JOptionPane.showMessageDialog(null, "Usuario guardado correctamente!! :D","Operacion realizada",1);
+                                        limpiar();
+                                    }else{
+                                        JOptionPane.showMessageDialog(null, "Error al guardar. D:","ERROR",0);
+                                        limpiar();
+                                    }
+                                }else{
+                                    JOptionPane.showMessageDialog(null, "Ingrese un correo electronico valido.","ALERTA",JOptionPane.WARNING_MESSAGE);
+                                }
                             }else{
-                                JOptionPane.showMessageDialog(null, "Error al guardar. D:","ERROR",0);
-                                limpiar();
+                                JOptionPane.showMessageDialog(null, "Ingrese un correo electronico valido.","ALERTA",JOptionPane.WARNING_MESSAGE);
                             }
                         }else{
                             JOptionPane.showMessageDialog(null, "El codigo postal debe tener 5 caracteres.","ALERTA",JOptionPane.WARNING_MESSAGE);
@@ -85,19 +95,7 @@ public class ControlUsuario {
                        
         }
         
-        if(e.getSource() == view.btnBorrar){
-            user.setMatricula(view.txtMatricula.getText());
-            if(query.borrarUsuario(user)){
-                JOptionPane.showMessageDialog(null, "Usuario eliminado correctamente!! :D","Operacion realizada",1);
-                limpiar();
-            }else{
-                JOptionPane.showMessageDialog(null, "Error al hacer la operación. D:","ERROR",0);
-                limpiar();
-            }
-            
-        }
-        
-        if(e.getSource() == view.btnExit){
+        if(e.getSource() == view.btnBuscar){
             user.setMatricula(view.txtMatricula.getText());
             if(query.buscarUsuario(user)){
                 view.txtMatricula.setText(user.getMatricula());
@@ -112,6 +110,18 @@ public class ControlUsuario {
             }
             else{
                 JOptionPane.showMessageDialog(null, "No se han encontrado datos similares. D:","Ups!!", 0);
+                limpiar();
+            }
+            
+        }
+        
+        if(e.getSource() == view.btnBorrar){
+            user.setMatricula(view.txtMatricula.getText());
+            if(query.borrarUsuario(user)){
+                JOptionPane.showMessageDialog(null, "Usuario eliminado correctamente!! :D","Operacion realizada",1);
+                limpiar();
+            }else{
+                JOptionPane.showMessageDialog(null, "Error al hacer la operación. D:","ERROR",0);
                 limpiar();
             }
             
