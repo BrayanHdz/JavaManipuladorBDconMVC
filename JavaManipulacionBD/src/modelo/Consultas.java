@@ -17,7 +17,6 @@ public class Consultas{
     
     public boolean agregarUsuario(Usuario us){
         
-        System.out.println(conexion.getDriver()+"\n"+conexion.getURL()+"\n"+conexion.getUser()+"\n"+conexion.getPassword());
         ps = null;
         Connection con = conexion.getConexion();
         sqlQuery = "INSERT INTO tablabUsuario(matricula,nombre,apellidoP,apellidoM,correo,cPostal,contra) VALUES(?,?,?,?,?,?,?)";
@@ -107,6 +106,7 @@ public class Consultas{
     }
     
     public boolean buscarUsuario(Usuario us){
+        System.out.println(conexion.getDriver()+"\n"+conexion.getURL()+"\n"+conexion.getUser()+"\n"+conexion.getPassword());
         ps = null;
         Connection con = conexion.getConexion();
         sqlQuery = "SELECT * FROM tablabUsuario WHERE matricula=?";
