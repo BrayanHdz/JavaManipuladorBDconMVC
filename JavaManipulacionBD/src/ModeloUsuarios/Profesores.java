@@ -11,6 +11,10 @@ import java.util.*;
     }
 
 }*/
+/**
+ * 
+ */
+
 public class Profesores extends Usuario {
 
     /**
@@ -32,124 +36,7 @@ public class Profesores extends Usuario {
     /**
      * 
      */
-    private String correoElectronico;
-
-    /**
-     * 
-     */
     private String telefono;
-
-    /**
-     * 
-     */
-    private String user;
-
-    /**
-     * 
-     */
-    private String psw;
-
-    /**
-     * 
-     */
-    public void Profesores() {
-        // TODO implement here
-    }
-
-    /**
-     * 
-     */
-    void Profesores() {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
-    public void setCedula() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public void setNombre() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public String getNombre() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
-    public void setCorreoElectronico() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public String getCorreoElectronico() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
-    public void setTelefono() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public int getTelefono() {
-        // TODO implement here
-        return 0;
-    }
-
-    /**
-     * @return
-     */
-    public void setUser() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public String getUser() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
-    protected void setPsw() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    protected String getPsw() {
-        // TODO implement here
-        return "";
-    }
 
     /**
      * 
@@ -200,22 +87,6 @@ public class Profesores extends Usuario {
     /**
      * @return
      */
-    public void setCorreoElectronico() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public String getCorreoElectronico() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
     public void setTelefono() {
         // TODO implement here
         return null;
@@ -225,38 +96,6 @@ public class Profesores extends Usuario {
      * @return
      */
     public String getTelefono() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
-    public void setUser() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public String getUser() {
-        // TODO implement here
-        return "";
-    }
-
-    /**
-     * @return
-     */
-    public void setPsw() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @return
-     */
-    public String getPsw() {
         // TODO implement here
         return "";
     }
