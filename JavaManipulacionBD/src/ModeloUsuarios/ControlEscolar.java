@@ -6,11 +6,18 @@ import java.util.*;
  * 
  */
 public class ControlEscolar extends Usuario {
+private String matricula;
+private String area;
+private Boolean empleadoEscuela;
+    
 
-    /**
-     * Default constructor
-     */
-    public ControlEscolar() {
+
+}
+  
+    public ControlEscolar() 
     }
+
+public void AgregarAlumno(){
+}
 
 }
